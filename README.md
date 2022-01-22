@@ -1,30 +1,3 @@
-<p align="center"><a href="https://devdojo.com/wave" target="_blank"><img src="https://cdn.devdojo.com/assets/img/github-wave-logo.svg" width="240"></a></p>
-
-<p align="center"><a href="https://www.producthunt.com/posts/wave-2-0" target="_blank"><img src="https://cdn.devdojo.com/images/april2021/upvote-product-hunt-img.png" height="auto" width="auto"></a></p>
-
-## Introduction
-
-[Wave](https://devdojo.com/wave) is a Software as a Service Starter Kit that can help you build your next great idea 💰. Wave is built with [Laravel](https://laravel.com), [Voyager](https://voyager.devdojo.com), [TailwindCSS](https://tailwindcss.com), and a few other awesome technologies. Here are some of the awesome features ✨:
-
- - [Authentication](https://wave.devdojo.com/docs/features/authentication)
- - [User Profiles](https://wave.devdojo.com/docs/features/user-profiles)
- - [User Impersonation](https://wave.devdojo.com/docs/features/user-impersonation)
- - [Subscriptions](https://wave.devdojo.com/docs/features/billing)
- - [Subscription Plans](https://wave.devdojo.com/docs/features/subscription-plans)
- - [User Roles](https://wave.devdojo.com/docs/features/user-roles)
- - [Notifications](https://wave.devdojo.com/docs/features/notifications)
- - [Announcements](https://wave.devdojo.com/docs/features/announcements)
- - [Fully Functional Blog](https://wave.devdojo.com/docs/features/blog)
- - [Out of the Box API](https://wave.devdojo.com/docs/features/api)
- - [Voyager Admin](https://wave.devdojo.com/docs/features/admin)
- - [Customizable Themes](https://wave.devdojo.com/docs/features/themes)
-
-
-## Demo
-View a live [demo here](https://wave.devdojo.com), or deploy your own instance to DigitalOcean, by clicking the button below.
-
-<a href="https://cloud.digitalocean.com/apps/new?repo=https://github.com/thedevdojo/wave/tree/main" target="_blank"><img src="https://www.deploytodo.com/do-btn-blue.svg" width="240" alt="Deploy to DO"></a>
-
 
 ## Installation
 
@@ -36,11 +9,11 @@ git clone https://github.com/thedevdojo/wave.git project_name
 
 Next, we can install Wave with these **4 simple steps**:
 
-### 1. Create a New Database
+### 1. Create a New Database Named "wave"
 
 We'll need to utilize a MySQL database during the installation. For the following stage, you'll need to create a new database and preserve the credentials.
 
-### 2. Copy the `.env.example` file
+### 2. Rename the `.env.example` file to '.env'
 
 We need to specify our Environment variables for our application. You will see a file named `.env.example`, you will need to duplicate that file and rename it to `.env`.
 
@@ -62,7 +35,7 @@ DB_PASSWORD=
 
 Following that, we'll need to install all composer dependencies through the following command:
 ```php
-composer update
+composer update 
 ```
 ### 4. Run Migrations and Seeds
 
