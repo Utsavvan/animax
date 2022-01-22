@@ -51,6 +51,13 @@ php artisan db:seed
 ```
 <br>
 
+### 5. Run Laravel
+
+After running this command Your site is live on localhost:
+```php
+php artisan serve
+```
+
 🎉 And that's it! You will now be able to visit your URL and see your Wave application up and running.
 
 
