@@ -62,7 +62,7 @@ DB_PASSWORD=
 
 Following that, we'll need to install all composer dependencies through the following command:
 ```php
-composer install
+composer update
 ```
 ### 4. Run Migrations and Seeds
 
