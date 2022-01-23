@@ -3,7 +3,7 @@
 /public/storage
 /public/.well-known
 /storage/*.key
-/vendor
+#/vendor
 /.idea
 /.vagrant
 /wave-pro
@@ -14,5 +14,5 @@ yarn-error.log
 .env
 .DS_Store
 .phpunit.result.cache
-/wave/vendor/
+#/wave/vendor/
 /public/wave/docs
