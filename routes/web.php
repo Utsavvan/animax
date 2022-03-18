@@ -14,9 +14,7 @@ Route::group(['prefix' => 'admin'], function () {
 Wave::routes();
 
 //website routes
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/home', 'homecontroller@grid')->name('movie.home');
 
 Route::get('/contact', function () {
     return view('contact');
@@ -33,3 +31,9 @@ Route::get('/subscription', function () {
 Route::get('/support', function () {
     return view('support');
 });
+
+Route::get('/movie', function () {
+    return view('emovie');
+});
+
+Route::get('/movie/{name}',"moviecontroller@movie");

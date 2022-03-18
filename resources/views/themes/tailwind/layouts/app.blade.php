@@ -53,13 +53,14 @@
 
     @include('theme::partials.header')
 
+
     <main class="flex-grow overflow-x-hidden">
         @yield('content')
     </main>
 
 
 
-    @include('theme::partials.footer')
+{{--    @include('theme::partials.footer')--}}
 
     @if(config('wave.dev_bar'))
         @include('theme::partials.dev_bar')

@@ -1,0 +1,422 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #181616;
+}
+
+/* ---------Navbar---------*/
+
+nav{
+    display: flex;
+    width: 100%;
+    background: #141414;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 30px;
+ }
+ nav .icon{
+    font-size: 35px;
+    font-weight: 800;
+    color: #fff;
+    cursor: pointer;
+ }
+ nav ol{
+    display: flex;
+    list-style: none;
+    margin: auto 0;
+ }
+ nav ol li{
+    margin: 0 2px;
+ }
+ nav ol li a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+ }
+ nav ol li:hover a{
+    background: #fff;
+    color: #0a5071;
+ }
+ nav .search_box{
+    display: flex;
+    margin: auto 0;
+    height: 35px;
+    line-height: 35px;
+ }
+ nav .search_box input{
+    border: none;
+    outline: none;
+    background: #fff;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 13px;
+    width: 350px;
+ }
+ nav .search_box span{
+    color: #0a5071;
+    font-size: 20px;
+    background: #fff;
+    height: 100%;
+    padding: 8px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+ }
+ nav .search_box span:hover{
+    color: #fff;
+ }
+ nav .search_box span::after{
+    height: 100%;
+    width: 0%;
+    content: '';
+    background: #ff003c;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transition: 0.3s;
+ }
+ nav .search_box span:hover::after{
+    width: 100%;
+ }
+ nav .bar{
+    position: relative;
+    margin: auto;
+    display: none;
+ }
+ nav .bar span{
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+ }
+ input[type="checkbox"]{
+    -webkit-appearance: none;
+    display: none;
+ }
+ @media screen and (max-width: 1200px){
+    nav{
+       display: block;
+       padding: 0;
+    }
+    nav .icon{
+       display: inline-block;
+       padding: 15px 30px;
+    }
+    nav .search_box{
+       width: 100%;
+       display: inline-flex;
+       justify-content: center;
+       margin-bottom: 15px;
+    }
+    nav .search_box input{
+       width: 90%;
+    }
+    nav ol{
+       display: flex;
+       flex-direction: column;
+       background: #fff;
+       height: 0;
+       visibility: hidden;
+       transition: 0.3s;
+    }
+    nav ol li{
+       text-align: center;
+       transition: 0.3s 0.1s all;
+       opacity: 0;
+    }
+    nav ol li a{
+       color: #000;
+       font-size: 28px;
+       padding: 13px;
+       display: block;
+    }
+    nav ol li:nth-child(1){
+       transform: translateX(-150px);
+    }
+    nav ol li:nth-child(2){
+       transform: translateX(-200px);
+    }
+    nav ol li:nth-child(3){
+       transform: translateX(-250px);
+    }
+    nav ol li:nth-child(4){
+       transform: translateX(-300px);
+    }
+    nav ol li:nth-child(5){
+       transform: translateX(-350px);
+    }
+    nav .bar{
+       display: block;
+       position: absolute;
+       top: 20px;
+       right: 80px;
+       cursor: pointer;
+    }
+    nav .bar #times{
+       display: none;
+    }
+    #check:checked ~ nav .bar #times{
+       display: block;
+    }
+    #check:checked ~ nav .bar #bars{
+       display: none;
+    }
+    #check:checked ~ nav ol{
+       visibility: visible;
+       height: 400px;
+    }
+    #check:checked ~ nav ol li:nth-child(1),
+    #check:checked ~ nav ol li:nth-child(2),
+    #check:checked ~ nav ol li:nth-child(3),
+    #check:checked ~ nav ol li:nth-child(4),
+    #check:checked ~ nav ol li:nth-child(5){
+       transform: translateX(0);
+       opacity: 1;
+    }
+ } 
+ 
+ /* -----------------End of Navbar ------------------------ */
+ 
+ 
+.contact{
+
+    position: relative;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    background-color:#181616;;
+    background-size:cover ;  
+}
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+
+}
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: red;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.contact .content p{
+    font-weight: 300;
+    color: #fff;
+}
+.container01{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+}
+.container01 .contactinfo
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container01 .contactinfo .box
+{
+     
+position: relative;
+padding: 20px 0;
+display: flex;
+
+}
+.container01 .contactinfo .box .icon
+{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container01 .contactinfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+
+}
+.container01 .contactinfo .box .text h3{
+   
+    font-weight: 500;
+    color:red;
+}
+.ContactForm{
+    width: 40%;
+    padding: 30px;
+    background: #fff;
+
+}
+.ContactForm h2{
+     font-size: 20px;
+     color: #333;
+     font-weight: 500;
+}
+.ContactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+     
+}
+.ContactForm .inputBox input,
+.ContactForm .inputBox textarea
+{
+ width: 100%;
+ padding: 5px 0;
+ font-size: 16px;
+ margin: 10px 0;
+ border: none;
+ border-bottom: 2px solid #333;
+ outline: none; 
+ resize: none;
+}
+
+ .ContactForm .inputBox span{
+      position:absolute;
+      left: 0;
+      padding: 5px 0;
+      font-size: 16px;
+      margin: 10px 0;
+      pointer-events: none;
+      transition: 0.5s;
+      color: #666;
+ }
+ .ContactForm .inputBox input:focus ~ span,
+ .ContactForm .inputBox input:valid  ~ span,
+ .ContactForm .inputBox textarea:focus ~ span,
+ .ContactForm .inputBox textarea:valid  ~ span 
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.ContactForm .inputBox input[type="submit"]
+{
+    width: 100px;
+    background:red;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px ;
+}
+
+@media  (max-width: 991px )
+{
+    .contact{
+        padding: 50px;
+    }
+    .container01{
+        flex-direction: column ;
+    }
+    .container01 .contactinfo
+    {
+        width: 100%;
+    }
+}
+
+    
+
+
+/*-------------------- Footer -----------------*/
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+    margin-top: 50px;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
