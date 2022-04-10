@@ -55,7 +55,7 @@ Route::group(['prefix' => 'admin'], function () {
 Wave::routes();
 
 //website routes
-Route::get('/', 'homecontroller@grid')->name('movie.home');
+Route::get('/', 'homecontroller@grid')->name('wave.home');
 
 Route::get('/contact', function () {
     return view('contact');

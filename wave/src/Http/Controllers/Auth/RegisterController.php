@@ -34,7 +34,7 @@ class RegisterController extends \App\Http\Controllers\Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -161,7 +161,7 @@ class RegisterController extends \App\Http\Controllers\Controller
         $user->save();
 
 
-        return redirect()->route('movie.home')->with(['message' => 'Successfully updated your profile information.', 'message_type' => 'success']);
+        return redirect()->route('wave.home')->with(['message' => 'Successfully updated your profile information.', 'message_type' => 'success']);
 
     }
 
