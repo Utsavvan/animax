@@ -25,7 +25,7 @@
     <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
 
 
-    <title>Movie Name</title>
+    <title>Movie Page</title>
 </head>
 
 <body>

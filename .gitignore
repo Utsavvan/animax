@@ -3,7 +3,7 @@
 /public/storage
 /public/.well-known
 /storage/*.key
-#/vendor
+/vendor
 /.idea
 /.vagrant
 /wave-pro
@@ -11,8 +11,8 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-#.env
+.env
 .DS_Store
 .phpunit.result.cache
-#/wave/vendor/
+/wave/vendor/
 /public/wave/docs

@@ -199,9 +199,9 @@
                                                 @endif
                                             @endforeach
                                             @canImpersonate
-                                                <a href="{{ route('impersonate', $data->{$data->getKeyName()}) }}" class="btn btn-sm btn-warning pull-right" style="margin-right:5px; background:#09cd9f;">
-                                                    <i class="voyager-people"></i> <span class="hidden-xs hidden-sm">Impersonate</span>
-                                                </a>
+{{--                                                <a href="{{ route('impersonate', $data->{$data->getKeyName()}) }}" class="btn btn-sm btn-warning pull-right" style="margin-right:5px; background:#09cd9f;">--}}
+{{--                                                    <i class="voyager-people"></i> <span class="hidden-xs hidden-sm">Impersonate</span>--}}
+{{--                                                </a>--}}
                                             @endCanImpersonate
                                         </td>
                                     </tr>
