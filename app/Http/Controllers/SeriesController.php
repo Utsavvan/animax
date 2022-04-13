@@ -18,7 +18,35 @@ class SeriesController extends Controller
     public function store(Request $request)
     {
         $series = new series();
+
         $series->name = $request->input('name');
+
+        //banner upload
+        $filenameWithExt = $request->file('banner')->getClientOriginalName();// Get Filename
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);// Get just Extension
+        $extension = $request->file('banner')->getClientOriginalExtension();// Filename To store
+        $fileNameToStore = $filename. '_'. time().'.'.$extension;// Upload Image
+        $request->file('banner')->storeAs('public/image', $fileNameToStore);
+
+        $series->banner = $fileNameToStore;
+
+        //poster upload
+        $filenameWithExt = $request->file('poster')->getClientOriginalName();// Get Filename
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);// Get just Extension
+        $extension = $request->file('poster')->getClientOriginalExtension();// Filename To store
+        $fileNameToStore = $filename. '_'. time().'.'.$extension;// Upload Image
+        $request->file('poster')->storeAs('public/image', $fileNameToStore);
+
+        $series->poster = $fileNameToStore;
+
+        $series->quality = $request->input('quality');
+        $series->rating = $request->input('rating');
+        $series->release_date = $request->input('release');
+        $series->language = $request->input('language');
+        $series->description = $request->input('description');
+        $series->Category = $request->input('category');
+        $series->trailer = $request->input('trailer');
+
         $series->save();
         return redirect()->route('view.series');
     }
@@ -38,12 +66,40 @@ class SeriesController extends Controller
     {
         $series = series::find($id);
         $seriesname = $series->name;
-        return view('updateseries',compact('seriesname'));
+        return view('updateseries',compact('seriesname','series'));
     }
     public function updates(Request $request,$id)
     {
         $series = series::find($id);
+
         $series->name = $request->input('name');
+
+        //banner upload
+        $filenameWithExt = $request->file('banner')->getClientOriginalName();// Get Filename
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);// Get just Extension
+        $extension = $request->file('banner')->getClientOriginalExtension();// Filename To store
+        $fileNameToStore = $filename. '_'. time().'.'.$extension;// Upload Image
+        $request->file('banner')->storeAs('public/image', $fileNameToStore);
+
+        $series->banner = $fileNameToStore;
+
+        //poster upload
+        $filenameWithExt = $request->file('poster')->getClientOriginalName();// Get Filename
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);// Get just Extension
+        $extension = $request->file('poster')->getClientOriginalExtension();// Filename To store
+        $fileNameToStore = $filename. '_'. time().'.'.$extension;// Upload Image
+        $request->file('poster')->storeAs('public/image', $fileNameToStore);
+
+        $series->poster = $fileNameToStore;
+
+        $series->quality = $request->input('quality');
+        $series->rating = $request->input('rating');
+        $series->release_date = $request->input('release');
+        $series->language = $request->input('language');
+        $series->description = $request->input('description');
+        $series->Category = $request->input('category');
+        $series->trailer = $request->input('trailer');
+
         $series->save();
         return redirect()->route('view.series');
     }

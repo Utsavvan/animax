@@ -16,6 +16,9 @@
 
 
 <!doctype html>
+
+<link rel="stylesheet" href="//cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+
 <html lang="en">
 <body>
 <div class="table-responsive">
@@ -24,6 +27,15 @@
         <tr>
             <th scope="col">Id</th>
             <th scope="col">Name</th>
+            <th scope="col">Banner</th>
+            <th scope="col">Poster</th>
+            <th scope="col">Quality</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Release_date</th>
+            <th scope="col">Language</th>
+            <th scope="col">Description</th>
+            <th scope="col">Category</th>
+            <th scope="col">Trailer</th>
             <th scope="col">Actions</th>
         </tr>
         </thead>
@@ -32,6 +44,15 @@
             <tr>
                 <td>{{ $seriess->id }}</td>
                 <td>{{ $seriess->name }}</td>
+                <td><img src={{ asset('storage/image/'. $seriess->banner)}} alt="" width="100"></td>
+                <td><img src={{ asset('storage/image/'. $seriess->poster)}} alt="" width="100"></td>
+                <td>{{ $seriess->quality }}</td>
+                <td>{{ $seriess->rating }}</td>
+                <td>{{ $seriess->release_date }}</td>
+                <td>{{ $seriess->language }}</td>
+                <td>{{ $seriess->description  }}</td>
+                <td>{{ $seriess->Category   }}</td>
+                <td>{{ $seriess->trailer  }}</td>
                 <td><a href="/admin/viewseason/{{ $seriess->name }}" class="btn btn-warning btn-add-new">
                         <i class="voyager-eye"></i> <span>View Seasons</span>
                     </a>
@@ -53,6 +74,14 @@
 </div>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="//cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready( function () {
+        $('#dataTable').DataTable();
+    } );
+</script>
+
 </html>
 
 @endsection
