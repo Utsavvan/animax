@@ -228,7 +228,7 @@
 input~.checked-radio-bg {
     /**
      * variable for changing position and size
-     * besed on radio checked 
+     * besed on radio checked
      */
     --width: 76px;
     --left: 8px;
@@ -241,20 +241,20 @@ input~.checked-radio-bg {
     border-radius: 10px;
 }
 
-#popular:checked~.checked-radio-bg {
-    --width: 76px;
-    --left: 87px;
-}
+/*#popular:checked~.checked-radio-bg {*/
+/*    --width: 76px;*/
+/*    --left: 87px;*/
+/*}*/
 
-#newest:checked~.checked-radio-bg {
-    --width: 78px;
-    --left: 162px;
-}
+/*#newest:checked~.checked-radio-bg {*/
+/*    --width: 78px;*/
+/*    --left: 162px;*/
+/*}*/
 
-#biggest:checked~.checked-radio-bg {
-    --width: 78px;
-    --left: 240px;
-}
+/*#biggest:checked~.checked-radio-bg {*/
+/*    --width: 78px;*/
+/*    --left: 240px;*/
+/*}*/
 
 /*#featured:checked~.checked-radio-bg {*/
 /*    --width: 78px;*/

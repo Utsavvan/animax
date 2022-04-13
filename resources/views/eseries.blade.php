@@ -118,30 +118,35 @@
 
         <div class="filter-radios">
 
-            <input type="radio" name="grade" id="featured" class="season1" checked>
-            <label for="featured" data-filter="season1">Season 1</label>
+            @foreach($season as $seasons)
+{{--                <span data-filter={{$seasons->id}}>{{$seasons->name}}</span>--}}
+            <input type="radio" name="grade" id="featured" class="season1">
+            <label for="featured" data-filter="{{$seasons->id}}">Season {{$seasons->name}}</label>
 
-            <input type="radio" name="grade" id="popular" class="season2">
-            <label for="popular" data-filter="season2">Season 2</label>
+{{--            <input type="radio" name="grade" id="popular" class="season2">--}}
+{{--            <label for="popular" data-filter="season2">Season 2</label>--}}
 
-            <input type="radio" name="grade" id="newest" class="season3">
-            <label for="newest" data-filter="season3">Season 3</label>
+{{--            <input type="radio" name="grade" id="newest" class="season3">--}}
+{{--            <label for="newest" data-filter="season3">Season 3</label>--}}
 
-            <input type="radio" name="grade" id="biggest" class="season4">
-            <label for="biggest" data-filter="season4">Season 4</label>
+{{--            <input type="radio" name="grade" id="biggest" class="season4">--}}
+{{--            <label for="biggest" data-filter="season4">Season 4</label>--}}
 
             <div class="checked-radio-bg"></div>
+            @endforeach
 
         </div>
     </div>
 </section>
 
 <!-- Season 1 -->
-<div class="section" style="margin-top: -50px; margin-left: 40px; margin-right: 40px;" id="season1" data-tags="season1">
+<div class="section" style="margin-top: -50px; margin-left: 40px; margin-right: 40px;" id="season1" >
     <div class="container">
         <div class="movies-slide carousel-nav-center owl-carousel">
             <!-- MOVIE ITEM -->
-            <div class="series-card">
+            @foreach($episode as $episodes)
+{{--                <div data-tags="">{{$episodes->name}}</div>--}}
+            <div class="series-card" data-tags={{$episodes->season_id}}>
                 <div class="card-head">
                     <img src="images/movies/red-notice.jpg" alt="" class="card-img">
 
@@ -156,110 +161,13 @@
                 </div>
 
                 <div class="card-body">
-                    <h3 class="card-title">Episode 1- Game begin</h3>
+                    <h3 class="card-title">{{$episodes->name}}</h3>
                 </div>
             </div>
+        @endforeach
 
             <!-- END MOVIE ITEM -->
-            <!-- MOVIE ITEM -->
-            <div class="series-card">
-                <div class="card-head">
-                    <img src="images/movies/Bat-man.jpg" alt="" class="card-img">
 
-                    <div class="card-overlay">
-                        <div class="play-btn play">
-                            <a href="javascript:void">
-                                <ion-icon name="play-circle-outline"></ion-icon>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-body">
-                    <h3 class="card-title">Episode 2- Can do it?</h3>
-                </div>
-
-            </div>
-            <!-- END MOVIE ITEM -->
-            <!-- MOVIE ITEM -->
-            <div class="series-card">
-                <div class="card-head">
-                    <img src="images/movies/red-notice.jpg" alt="" class="card-img">
-
-                    <div class="card-overlay">
-                        <div class="play-btn play">
-                            <a href="javascript:void">
-                                <ion-icon name="play-circle-outline"></ion-icon>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-body">
-                    <h3 class="card-title">Episode 1- Game begin</h3>
-                </div>
-            </div>
-            <!-- END MOVIE ITEM -->
-            <!-- MOVIE ITEM -->
-            <div class="series-card">
-                <div class="card-head">
-                    <img src="images/movies/Bat-man.jpg" alt="" class="card-img">
-
-                    <div class="card-overlay">
-                        <div class="play-btn play">
-                            <a href="javascript:void">
-                                <ion-icon name="play-circle-outline"></ion-icon>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-body">
-                    <h3 class="card-title">Episode 2- Can do it?</h3>
-                </div>
-
-            </div>
-            <!-- END MOVIE ITEM -->
-            <!-- MOVIE ITEM -->
-            <div class="series-card">
-                <div class="card-head">
-                    <img src="images/movies/red-notice.jpg" alt="" class="card-img">
-
-                    <div class="card-overlay">
-                        <div class="play-btn play">
-                            <a href="javascript:void">
-                                <ion-icon name="play-circle-outline"></ion-icon>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-body">
-                    <h3 class="card-title">Episode 1- Game begin</h3>
-                </div>
-            </div>
-            <!-- END MOVIE ITEM -->
-            <!-- MOVIE ITEM -->
-            <div class="series-card">
-                <div class="card-head">
-                    <img src="images/movies/Bat-man.jpg" alt="" class="card-img">
-
-                    <div class="card-overlay">
-                        <div class="play-btn play">
-                            <a href="javascript:void">
-                                <ion-icon name="play-circle-outline"></ion-icon>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="card-body">
-                    <h3 class="card-title">Episode 2- Can do it?</h3>
-                </div>
-
-            </div>
-            <!-- END MOVIE ITEM -->
 
         </div>
     </div>

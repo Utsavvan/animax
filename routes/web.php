@@ -61,9 +61,10 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/profile', function () {
-    return view('profile');
-});
+Route::get('/profile/{id}','\App\Http\Controllers\profileController@');
+
+Route::get('profile','profileController@userid');
+Route::post('profile','profileController@changePassword');
 
 Route::get('/subscription', function () {
     return view('subscription');

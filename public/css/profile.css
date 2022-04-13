@@ -75,7 +75,12 @@
     color: #919aa3;
 }
 
-
+.btn{
+    color: #000;
+}
+a{
+    color: #000;
+}
 /*responsive*/
 
 @media(max-width: 767px) {
@@ -84,6 +89,8 @@
         margin-bottom: 30px;
     }
 }
+
+
 
 @media(max-width: 574px) {
     .col {
