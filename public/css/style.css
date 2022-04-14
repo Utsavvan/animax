@@ -27,6 +27,13 @@ body {
     background: #141414;
 }
 
+#s-btn{
+    color: black;
+    background: #c0392b;
+    height: 35px;
+    width: 50px;
+}
+
 
 /* ---------Navbar---------*/
 

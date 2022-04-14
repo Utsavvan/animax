@@ -15,4 +15,11 @@ class moviecontroller extends Controller
         return view('emovie',compact('movie','suggestedMovie'));
 //        dd($movie);
     }
+
+    public function search(Request $request)
+    {
+//        return $request->input('query');
+        $data = Movie::where('title','like','%'.$request->input('query').'%')->get();
+        return view('search',compact('data'));
+    }
 }

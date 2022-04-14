@@ -61,7 +61,7 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/profile/{id}','\App\Http\Controllers\profileController@');
+
 
 Route::get('profile','profileController@userid');
 Route::post('profile','profileController@changePassword');
@@ -74,11 +74,12 @@ Route::get('/support', function () {
     return view('support');
 });
 
-Route::get('/movie', function () {
-    return view('emovie');
-});
-
 Route::get('/movie/{name}',"moviecontroller@movie");
 
-Route::get('/series/{name}',"seriescontroller@series");
+//search routes
+
+Route::get('search','moviecontroller@search');
+
+
+
 

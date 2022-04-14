@@ -29,8 +29,11 @@
 <nav>
     <div class="icon">Ani<b style="color: red;">M</b>ax</div>
     <div class="search_box">
-        <input type="search" placeholder="Search here">
-        <span class="fa fa-search"></span>
+        <form action="search">
+        <input type="search" name="query" placeholder="Search here">
+{{--        <span class="fa fa-search"></span>--}}
+            <button id="s-btn" type="submit">Search</button>
+        </form>
     </div>
     <ol>
         <li><a href="#">home</a></li>

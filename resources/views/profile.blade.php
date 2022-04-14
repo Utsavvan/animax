@@ -56,7 +56,7 @@
 <div class="wrapper">
     <div class="left">
 
-            <h4>{{$name}}</h4>
+        <h4>{{$name}}</h4>
 
     </div>
     <div class="right">
@@ -129,7 +129,6 @@
         <button class="favorite styled" type="button">
             <a href="/logout">Log Out</a>
         </button>
-
 
 
     </div>
