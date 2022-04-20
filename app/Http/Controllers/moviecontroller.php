@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Movie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class moviecontroller extends Controller
 {
@@ -12,7 +13,14 @@ class moviecontroller extends Controller
         $movie = \DB::select('SELECT * FROM `movies` WHERE title = ?' , [$name]);
 //        $suggestedMovie = Movie::all()->inRandomOrder();
         $suggestedMovie = Movie::inRandomOrder()->get();
-        return view('emovie',compact('movie','suggestedMovie'));
+        if(!empty(Auth::user()->email)) {
+            $useremail = Auth::user()->email;
+            $username = Auth::user()->name;
+        }else{
+            $useremail = 1;
+            $username = 1;
+        }
+        return view('emovie',compact('movie','suggestedMovie','username','useremail'));
 //        dd($movie);
     }
 

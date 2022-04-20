@@ -30,7 +30,9 @@
 <body>
 <input type="checkbox" id="check">
 <nav>
-    <div class="icon">Ani<b style="color: red;">M</b>ax</div>
+    <a href="/" title="Website name">
+        <div class="icon">Ani<b style="color: red;">M</b>ax</div>
+    </a>
     <div class="search_box">
         <form action="search">
             <input type="search" name="query" placeholder="Search here">
@@ -43,8 +45,13 @@
         <li><a href="#">contact</a></li>
         <li><a href="#">services</a></li>
         <li><a href="#">about</a></li>
-        <li><a href="#">Register</a></li>
-        <li><a href="/login">login</a></li>
+
+        @if (Auth::check())
+            <li><a href="/profile"><i class="fa fa-user-circle-o user" aria-hidden="true"></i></a></li>Profile
+        @else
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">login</a></li>
+        @endif
     </ol>
     <label for="check" class="bar">
         <span class="fa fa-bars" id="bars"></span>
@@ -74,20 +81,24 @@
                                 <ion-icon name="star-outline"></ion-icon>
                                 <span>{{$smovie->rating}}</span>
                             </div>
-
+                            <a href="/movie/{{$smovie->title}}" title="Website name">
                             <div class="play">
                                 <ion-icon name="play-circle-outline"></ion-icon>
                             </div>
+                            </a>
                         </div>
                     </div>
 
+
                     <div class="card-body">
+                        <a href="/movie/{{$smovie->title}}" title="Website name">
                         <h3 class="card-title">{{$smovie->title}}</h3>
 
                         <div class="card-info">
                             <span class="genre">{{$smovie->Category}}</span>
                             <span class="year">{{$smovie->release_date}}</span>
                         </div>
+                        </a>
                     </div>
 
                 </div>

@@ -5,15 +5,19 @@
 
     <!-- Css -->
     <link rel="stylesheet" type="text/css" href={{ asset("./css/style.css")}} >
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
+          rel="stylesheet">
 
     <!-- OWL CAROUSEL -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+          integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+          crossorigin="anonymous"/>
     <!-- BOX ICONS -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
@@ -27,21 +31,45 @@
 
 <input type="checkbox" id="check">
 <nav>
+    <a href="/" title="Website name">
     <div class="icon">Ani<b style="color: red;">M</b>ax</div>
+    </a>
     <div class="search_box">
         <form action="search">
-        <input type="search" name="query" placeholder="Search here">
-{{--        <span class="fa fa-search"></span>--}}
+            <input type="search" name="query" placeholder="Search here">
+            {{--        <span class="fa fa-search"></span>--}}
             <button id="s-btn" type="submit">Search</button>
         </form>
+        @if (Auth::check())
+            <form action="{{ route('make.payment') }}" method="POST" enctype="multipart/form-data">
+                {!! csrf_field() !!}
+                <input type="text" name="name" hidden value={{$username}} class="form-control" placeholder="Name" required>
+                <input type="text" name="mobile" hidden class="form-control"
+                       value={{rand(9111111111,9199999999)}} maxlength="10" placeholder="Mobile No.">
+                <input type="email" class="form-control" hidden value={{$useremail}} placeholder="Email" name="email"
+                       required>
+                <button id="" type="submit">Subscribe</button>
+            </form>
+        @else
+{{--            <li><a href="/login">Subscribe</a></li>--}}
+            <button onclick="window.location.href='/login';">
+                Click Here
+            </button>
+        @endif
+
     </div>
     <ol>
-        <li><a href="#">home</a></li>
+        <li><a href="/">home</a></li>
         <li><a href="#">contact</a></li>
         <li><a href="#">services</a></li>
         <li><a href="#">about</a></li>
-        <li><a href="#">Register</a></li>
-        <li><a href="/login">login</a></li>
+
+        @if (Auth::check())
+            <li><a href="/profile"><i class="fa fa-user-circle-o user" aria-hidden="true"></i></a></li>Profile
+        @else
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">login</a></li>
+        @endif
     </ol>
     <label for="check" class="bar">
         <span class="fa fa-bars" id="bars"></span>
@@ -50,7 +78,6 @@
 </nav>
 
 <!---------------- End Of Navbar  --------------->
-
 
 
 <!------------- Banner ------------->
@@ -84,7 +111,9 @@
                             </div>
                         </div>
                         <div class="item-content-description top-down delay-4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt non odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias ratione mollitia accusantium, facere ab suscipit.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt non
+                            odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias ratione
+                            mollitia accusantium, facere ab suscipit.
                         </div>
                         <div class="item-action top-down delay-6">
                             <a href="#" class="btn btn-hover">
@@ -122,7 +151,9 @@
                             </div>
                         </div>
                         <div class="item-content-description top-down delay-4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt non odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias ratione mollitia accusantium, facere ab suscipit.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt non
+                            odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias ratione
+                            mollitia accusantium, facere ab suscipit.
                         </div>
                         <div class="item-action top-down delay-6">
                             <a href="#" class="btn btn-hover">
@@ -160,7 +191,9 @@
                             </div>
                         </div>
                         <div class="item-content-description top-down delay-4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt non odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias ratione mollitia accusantium, facere ab suscipit.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt non
+                            odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias ratione
+                            mollitia accusantium, facere ab suscipit.
                         </div>
                         <div class="item-action top-down delay-6">
                             <a href="#" class="btn btn-hover">
@@ -187,37 +220,41 @@
         <div class="movies-slide carousel-nav-center owl-carousel">
             <!-- MOVIE ITEM -->
             @foreach($movie as $movies)
-            <div class="movie-card">
-                <div class="card-head">
-                    <img src="{{ Voyager::image($movies->poster)}}" alt="" class="card-img">
+                <div class="movie-card">
+                    <div class="card-head">
+                        <img src="{{ Voyager::image($movies->poster)}}" alt="" class="card-img">
 
-                    <div class="card-overlay">
+                        <div class="card-overlay">
 
-                        <div class="bookmark">
-                            <ion-icon name="bookmark-outline"></ion-icon>
-                        </div>
+                            <div class="bookmark">
+                                <ion-icon name="bookmark-outline"></ion-icon>
+                            </div>
 
-                        <div class="rating">
-                            <ion-icon name="star-outline"></ion-icon>
-                            <span>{{$movies->rating}}</span>
-                        </div>
+                            <div class="rating">
+                                <ion-icon name="star-outline"></ion-icon>
+                                <span>{{$movies->rating}}</span>
+                            </div>
 
-                        <div class="play">
-                            <ion-icon name="play-circle-outline"></ion-icon>
+                            <div class="play">
+                                <a href="/movie/{{$movies->title}}" title="Website name">
+                                    <ion-icon name="play-circle-outline"></ion-icon>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="card-body">
-                    <h3 class="card-title">{{$movies->title}}</h3>
+                    <div class="card-body">
+                        <a href="/movie/{{$movies->title}}" title="Website name">
+                        <h3 class="card-title">{{$movies->title}}</h3>
 
-                    <div class="card-info">
-                        <span class="genre">{{$movies->Category}}</span>
-                        <span class="year">{{$movies->release_date}}</span>
+                        <div class="card-info">
+                            <span class="genre">{{$movies->Category}}</span>
+                            <span class="year">{{$movies->release_date}}</span>
+                        </div>
+                        </a>
                     </div>
-                </div>
 
-            </div>
+                </div>
         @endforeach
         <!-- END MOVIE ITEM -->
 
@@ -251,22 +288,27 @@
                             </div>
 
                             <div class="play">
-                                <ion-icon name="play-circle-outline"></ion-icon>
+                                <a href="/movie/{{$moviel->title}}" title="Website name">
+                                    <ion-icon name="play-circle-outline"></ion-icon>
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <div class="card-body">
-                        <h3 class="card-title">{{$moviel->title}}</h3>
+                        <a href="/movie/{{$moviel->title}}" title="Website name">
+                            <h3 class="card-title">{{$moviel->title}}</h3>
 
                         <div class="card-info">
                             <span class="genre">{{$moviel->Category}}</span>
                             <span class="year">{{$moviel->release_date}}</span>
                         </div>
+                        </a>
+
                     </div>
 
                 </div>
-            @endforeach
+        @endforeach
         <!-- END MOVIE ITEM -->
 
         </div>
@@ -301,7 +343,9 @@
                     </div>
                 </div>
                 <div class="item-content-description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt non odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias ratione mollitia accusantium, facere ab suscipit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt non odit, cum
+                    vero reprehenderit laudantium odio vitae autem quam, incidunt molestias ratione mollitia
+                    accusantium, facere ab suscipit.
                 </div>
                 <div class="item-action">
                     <a href="#" class="btn btn-hover">
@@ -340,22 +384,25 @@
                             </div>
 
                             <div class="play">
-                                <ion-icon name="play-circle-outline"></ion-icon>
+                                <a href="/movie/{{$movie->title}}" title="Website name">
+                                    <ion-icon name="play-circle-outline"></ion-icon>
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <div class="card-body">
+                        <a href="/movie/{{$movie->title}}" title="Website name">
                         <h3 class="card-title">{{$movie->title}}</h3>
-
                         <div class="card-info">
                             <span class="genre">{{$movie->Category}}</span>
                             <span class="year">{{$movie->release_date}}</span>
                         </div>
+                        </a>
                     </div>
 
                 </div>
-            @endforeach
+        @endforeach
         <!-- END MOVIE ITEM -->
         </div>
     </div>
@@ -413,9 +460,12 @@
 
 <!-- SCRIPT -->
 <!-- JQUERY -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <!-- OWL CAROUSEL -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
 <!--- ionicon link-->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

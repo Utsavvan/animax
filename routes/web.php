@@ -63,7 +63,7 @@ Route::get('/contact', function () {
 
 
 
-Route::get('profile','profileController@userid');
+Route::get('profile','profileController@userid')->name('profile');
 Route::post('profile','profileController@changePassword');
 
 Route::get('/subscription', function () {
@@ -79,6 +79,13 @@ Route::get('/movie/{name}',"moviecontroller@movie");
 //search routes
 
 Route::get('search','moviecontroller@search');
+
+//payment routes
+
+
+Route::get('/initiate','PaytmController@initiate')->name('initiate.payment');
+Route::post('/payment','PaytmController@pay')->name('make.payment');
+Route::post('/payment/status', 'PaytmController@paymentCallback')->name('status');
 
 
 

@@ -31,19 +31,29 @@
 
 <!------------ Navbar ------------>
 
-<input type="checkbox" id="check">
 <nav>
-    <div class="icon">Ani<b style="color: red;">M</b>ax</div>
+    <a href="/" title="Website name">
+        <div class="icon">Ani<b style="color: red;">M</b>ax</div>
+    </a>
     <div class="search_box">
-        <input type="search" placeholder="Search here">
-        <span class="fa fa-search"></span>
+        <form action="search">
+            <input type="search" name="query" placeholder="Search here">
+            {{--        <span class="fa fa-search"></span>--}}
+            <button id="s-btn" type="submit">Search</button>
+        </form>
     </div>
     <ol>
-        <li><a href="index.html">home</a></li>
-        <li><a href="Contact.html">contact</a></li>
+        <li><a href="#">home</a></li>
+        <li><a href="#">contact</a></li>
         <li><a href="#">services</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="#">login here</a></li>
+        <li><a href="#">about</a></li>
+
+        @if (Auth::check())
+            <li><a href="/profile"><i class="fa fa-user-circle-o user" aria-hidden="true"></i></a></li>Profile
+        @else
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">login</a></li>
+        @endif
     </ol>
     <label for="check" class="bar">
         <span class="fa fa-bars" id="bars"></span>
@@ -89,8 +99,12 @@
             <h3>subscription</h3>
             <div class="projects_data">
                 <div class="data col">
+                    @if(Auth::user()->role_id==5)
                     <h4>Premium</h4>
-                    <p>$35.99/month</p>
+                    <p>₹1500/month</p>
+                    @else
+                    <h4>No plan subscribed</h4>
+                    @endif
                 </div>
                 <div class="data col">
                     <h4>Content</h4>

@@ -32,24 +32,47 @@
 
     <!------------ Navbar ------------>
 
-    <input type="checkbox" id="check">
     <nav>
-        <div class="icon">Ani<b style="color: red;">M</b>ax</div>
+        <a href="/" title="Website name">
+            <div class="icon">Ani<b style="color: red;">M</b>ax</div>
+        </a>
         <div class="search_box">
-            <input type="search" placeholder="Search here">
-            <span class="fa fa-search"></span>
+            <form action="search">
+                <input type="search" name="query" placeholder="Search here">
+                {{--        <span class="fa fa-search"></span>--}}
+                <button id="s-btn" type="submit">Search</button>
+            </form>
+            @if (Auth::check())
+                <form action="{{ route('make.payment') }}" method="POST" enctype="multipart/form-data">
+                    {!! csrf_field() !!}
+                    <input type="text" name="name" hidden value={{$username}} class="form-control" placeholder="Name" required>
+                    <input type="text" name="mobile" hidden class="form-control"
+                           value={{rand(9111111111,9199999999)}} maxlength="10" placeholder="Mobile No.">
+                    <input type="email" class="form-control" hidden value={{$useremail}} placeholder="Email" name="email"
+                           required>
+                    <button id="" type="submit">Subscribe</button>
+                </form>
+            @else
+                <li><a href="/login">Subscribe</a></li>
+            @endif
         </div>
         <ol>
             <li><a href="#">home</a></li>
             <li><a href="#">contact</a></li>
             <li><a href="#">services</a></li>
             <li><a href="#">about</a></li>
-            <li><a href="#">login here</a></li>
+
+            @if (Auth::check())
+                <li><a href="/profile"><i class="fa fa-user-circle-o user" aria-hidden="true"></i></a></li>Profile
+            @else
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">login</a></li>
+            @endif
         </ol>
         <label for="check" class="bar">
-			<span class="fa fa-bars" id="bars"></span>
-			<span class="fa fa-times" id="times"></span>
-		</label>
+            <span class="fa fa-bars" id="bars"></span>
+            <span class="fa fa-times" id="times"></span>
+        </label>
     </nav>
 
     <!---------------- End Of Navbar  --------------->
@@ -95,6 +118,7 @@
                     <a href="{{$movies->trailer}}" target="_blank" class="watch-btn">Watch Trailer</a>
                 </div>
             </div>
+            @if(Auth::user()->role_id==5)
             <div class="play-btn-container">
                 <div class="play-btn">
                     <a href="javascript:void">
@@ -114,6 +138,9 @@
                     </video>
                 </div>
             </div>
+            @else
+
+            @endif
         </div>
     </section>
     @endforeach
