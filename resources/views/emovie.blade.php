@@ -59,7 +59,6 @@
         <ol>
             <li><a href="#">home</a></li>
             <li><a href="#">contact</a></li>
-            <li><a href="#">services</a></li>
             <li><a href="#">about</a></li>
 
             @if (Auth::check())
