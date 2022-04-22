@@ -2,14 +2,15 @@
 
 @section('content')
 
+<div class="flex flex-col bg-black justify-center py-20 sm:px-6 lg:px-8">
 
     <div class="sm:mx-auto sm:w-full sm:max-w-md sm:pt-10">
-        <h2 class="text-3xl font-extrabold leading-9 text-center text-gray-900 sm:mt-6 lg:text-5xl">
+        <h2 class="text-3xl font-extrabold leading-9 text-center text-red-600 sm:mt-6 lg:text-5xl">
             Sign up Below
         </h2>
         <p class="mt-4 text-sm leading-5 text-center text-gray-600 max-w">
             or, you can
-            <a href="{{ route('login') }}" class="font-medium transition duration-150 ease-in-out text-wave-600 hover:text-wave-500 focus:outline-none focus:underline">
+            <a href="{{ route('login') }}" class="font-medium transition duration-150 ease-in-out text-red-600 hover:text-wave-500 focus:outline-none focus:underline">
                 login here
             </a>
         </p>
@@ -109,11 +110,11 @@
 
                     <div class="flex flex-col items-center justify-center text-sm leading-5">
                         <span class="block w-full mt-5 rounded-md shadow-sm">
-                            <button type="submit" class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white transition duration-150 ease-in-out border border-transparent rounded-md bg-wave-600 hover:bg-wave-500 focus:outline-none focus:border-wave-700 focus:shadow-outline-wave active:bg-wave-700">
+                            <button type="submit" class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white transition duration-150 ease-in-out border border-transparent rounded-md bg-wave-600 hover:bg-red-500 focus:outline-none focus:border-wave-700 focus:shadow-outline-wave active:bg-wave-700">
                                 Register
                             </button>
                         </span>
-                        <a href="{{ route('login') }}" class="mt-3 font-medium transition duration-150 ease-in-out text-wave-600 hover:text-wave-500 focus:outline-none focus:underline">
+                        <a href="{{ route('login') }}" class="mt-3 font-medium transition duration-150 ease-in-out text-red-600 hover:text-wave-500 focus:outline-none focus:underline">
                             Already have an account? Login here
                         </a>
                     </div>
@@ -121,4 +122,5 @@
             </div>
         </div>
     </div>
+</div>
 @endsection

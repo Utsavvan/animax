@@ -30,42 +30,36 @@
 
 <body>
 
-    <!------------ Navbar ------------>
+nav bar
 
+<input type="checkbox" id="check">
     <nav>
         <a href="/" title="Website name">
             <div class="icon">Ani<b style="color: red;">M</b>ax</div>
         </a>
         <div class="search_box">
-            <form action="search">
+            <form action="/search">
                 <input type="search" name="query" placeholder="Search here">
-                {{--        <span class="fa fa-search"></span>--}}
+                {{-- <span class="fa fa-search"></span>--}}
                 <button id="s-btn" type="submit">Search</button>
             </form>
-            @if (Auth::check())
-                <form action="{{ route('make.payment') }}" method="POST" enctype="multipart/form-data">
-                    {!! csrf_field() !!}
-                    <input type="text" name="name" hidden value={{$username}} class="form-control" placeholder="Name" required>
-                    <input type="text" name="mobile" hidden class="form-control"
-                           value={{rand(9111111111,9199999999)}} maxlength="10" placeholder="Mobile No.">
-                    <input type="email" class="form-control" hidden value={{$useremail}} placeholder="Email" name="email"
-                           required>
-                    <button id="" type="submit">Subscribe</button>
-                </form>
-            @else
-                <li><a href="/login">Subscribe</a></li>
-            @endif
         </div>
         <ol>
+<<<<<<< HEAD
             <li><a href="#">home</a></li>
             <li><a href="#">contact</a></li>
             <li><a href="#">about</a></li>
+=======
+            <li><a href="/">home</a></li>
+            <li><a href="/contact">contact</a></li>
+            <li><a href="/about">about</a></li>
+>>>>>>> 6d74ea323beafabe63b6dec79cb4a66e6110c0e1
 
             @if (Auth::check())
-                <li><a href="/profile"><i class="fa fa-user-circle-o user" aria-hidden="true"></i></a></li>Profile
+            <li><a href="/profile"><i class="fa fa-user-circle-o user" aria-hidden="true"></i> Profile</a></li>
             @else
-                <li><a href="/register">Register</a></li>
-                <li><a href="/login">login</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">login</a></li>
             @endif
         </ol>
         <label for="check" class="bar">
@@ -169,18 +163,22 @@
                                 </div>
 
                                 <div class="play">
+                                <a href="/movie/{{$smovie->title}}" title="Website name">
                                     <ion-icon name="play-circle-outline"></ion-icon>
+                                </a>
                                 </div>
                             </div>
                         </div>
 
                         <div class="card-body">
+                        <a href="/movie/{{$smovie->title}}" title="Website name">
                             <h3 class="card-title">{{$smovie->title}}</h3>
 
                             <div class="card-info">
                                 <span class="genre">{{$smovie->Category}}</span>
                                 <span class="year">{{$smovie->release_date}}</span>
                             </div>
+                        </a>
                         </div>
 
                     </div>
@@ -193,6 +191,7 @@
 
     <!------------- End Movie Intro --------->
 
+    
     <!---------- Footer --------->
 
     <footer class="footer">
@@ -201,39 +200,45 @@
                 <div class="footer-col">
                     <h4>company</h4>
                     <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact us</a></li>
+                        <li><a href="/privacy">Privacy policy</a></li>
+
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>get help</h4>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">shipping</a></li>
-                        <li><a href="#">returns</a></li>
-                        <li><a href="#">order status</a></li>
-                        <li><a href="#">payment options</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <!-- <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li> -->
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>online shop</h4>
-                    <ul>
-                        <li><a href="#">watch</a></li>
-                        <li><a href="#">bag</a></li>
-                        <li><a href="#">shoes</a></li>
-                        <li><a href="#">dress</a></li>
-                    </ul>
-                </div>
+                <!-- <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                    <li><a href="#">watch</a></li>
+                    <li><a href="#">bag</a></li>
+                    <li><a href="#">shoes</a></li>
+                    <li><a href="#">dress</a></li>
+                </ul>
+            </div> -->
                 <div class="footer-col">
                     <h4>follow us</h4>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
+                </div>
+                <div class="footer-col">
+                    <h4>E-mail</h4>
+                    <ul>
+                        <li><a href="mailto: animaxproject@gmail.com">animaxproject@gmail.com</a></li>
+
+                    </ul>
                 </div>
             </div>
         </div>

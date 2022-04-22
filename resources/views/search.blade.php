@@ -28,36 +28,38 @@
     <title>Search Page</title>
 </head>
 <body>
-<input type="checkbox" id="check">
-<nav>
-    <a href="/" title="Website name">
-        <div class="icon">Ani<b style="color: red;">M</b>ax</div>
-    </a>
-    <div class="search_box">
-        <form action="search">
-            <input type="search" name="query" placeholder="Search here">
-            {{--        <span class="fa fa-search"></span>--}}
-            <button id="s-btn" type="submit">Search</button>
-        </form>
-    </div>
-    <ol>
-        <li><a href="#">home</a></li>
-        <li><a href="#">contact</a></li>
-        <li><a href="#">services</a></li>
-        <li><a href="#">about</a></li>
 
-        @if (Auth::check())
-            <li><a href="/profile"><i class="fa fa-user-circle-o user" aria-hidden="true"></i></a></li>Profile
-        @else
+<!-- nav bar -->
+
+<input type="checkbox" id="check">
+    <nav>
+        <a href="/" title="Website name">
+            <div class="icon">Ani<b style="color: red;">M</b>ax</div>
+        </a>
+        <div class="search_box">
+            <form action="/search">
+                <input type="search" name="query" placeholder="Search here">
+                {{-- <span class="fa fa-search"></span>--}}
+                <button id="s-btn" type="submit">Search</button>
+            </form>
+        </div>
+        <ol>
+            <li><a href="/">home</a></li>
+            <li><a href="/contact">contact</a></li>
+            <li><a href="/about">about</a></li>
+
+            @if (Auth::check())
+            <li><a href="/profile"><i class="fa fa-user-circle-o user" aria-hidden="true"></i> Profile</a></li>
+            @else
             <li><a href="/register">Register</a></li>
             <li><a href="/login">login</a></li>
-        @endif
-    </ol>
-    <label for="check" class="bar">
-        <span class="fa fa-bars" id="bars"></span>
-        <span class="fa fa-times" id="times"></span>
-    </label>
-</nav>
+            @endif
+        </ol>
+        <label for="check" class="bar">
+            <span class="fa fa-bars" id="bars"></span>
+            <span class="fa fa-times" id="times"></span>
+        </label>
+    </nav>
 
 <div class="section">
     <div class="container">
@@ -108,6 +110,59 @@
     </div>
 </div>
 
+    <!---------- Footer --------->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact us</a></li>
+                        <li><a href="/privacy">Privacy policy</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="/faq">FAQ</a></li>
+                        <!-- <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li> -->
+                    </ul>
+                </div>
+                <!-- <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                    <li><a href="#">watch</a></li>
+                    <li><a href="#">bag</a></li>
+                    <li><a href="#">shoes</a></li>
+                    <li><a href="#">dress</a></li>
+                </ul>
+            </div> -->
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>E-mail</h4>
+                    <ul>
+                        <li><a href="mailto: animaxproject@gmail.com">animaxproject@gmail.com</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!---------- End Footer --------->
 </body>
 <!-- SCRIPT -->
 <!-- JQUERY -->
