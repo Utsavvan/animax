@@ -61,6 +61,13 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/faq', function () {
+    return view('faq');
+});
+
+Route::get('privacy', function () {
+    return view('privacy');
+});
 
 
 Route::get('profile','profileController@userid')->name('profile');
@@ -86,6 +93,10 @@ Route::get('search','moviecontroller@search');
 Route::get('/initiate','PaytmController@initiate')->name('initiate.payment');
 Route::post('/payment','PaytmController@pay')->name('make.payment');
 Route::post('/payment/status', 'PaytmController@paymentCallback')->name('status');
+
+Route::get('/about', function () {
+    return view('about');
+});
 
 
 
