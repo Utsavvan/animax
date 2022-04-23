@@ -100,7 +100,7 @@
                                 mollitia accusantium, facere ab suscipit.
                             </div>
                             <div class="item-action top-down delay-6">
-                                <a href="#" class="btn btn-hover">
+                                <a href="https://youtu.be/xjDjIWPwcPU" target="_blank" class="btn btn-hover">
                                     <i class="bx bxs-right-arrow"></i>
                                     <span>Watch now</span>
                                 </a>
@@ -140,7 +140,7 @@
                                 mollitia accusantium, facere ab suscipit.
                             </div>
                             <div class="item-action top-down delay-6">
-                                <a href="#" class="btn btn-hover">
+                                <a href="https://youtu.be/xjDjIWPwcPU" target="_blank" class="btn btn-hover">
                                     <i class="bx bxs-right-arrow"></i>
                                     <span>Watch now</span>
                                 </a>
@@ -180,7 +180,7 @@
                                 mollitia accusantium, facere ab suscipit.
                             </div>
                             <div class="item-action top-down delay-6">
-                                <a href="#" class="btn btn-hover">
+                                <a href="https://youtu.be/xjDjIWPwcPU" target="_blank" class="btn btn-hover">
                                     <i class="bx bxs-right-arrow"></i>
                                     <span>Watch now</span>
                                 </a>
@@ -383,7 +383,7 @@
                         accusantium, facere ab suscipit.
                     </div>
                     <div class="item-action">
-                        <a href="#" class="btn btn-hover">
+                        <a href="https://youtu.be/xjDjIWPwcPU" target="_blank" class="btn btn-hover">
                             <i class="bx bxs-right-arrow"></i>
                             <span>Watch now</span>
                         </a>
