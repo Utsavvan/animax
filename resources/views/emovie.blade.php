@@ -30,7 +30,7 @@
 
 <body>
 
-nav bar
+{{--nav bar--}}
 
 <input type="checkbox" id="check">
     <nav>
@@ -45,15 +45,10 @@ nav bar
             </form>
         </div>
         <ol>
-<<<<<<< HEAD
-            <li><a href="#">home</a></li>
-            <li><a href="#">contact</a></li>
-            <li><a href="#">about</a></li>
-=======
+
             <li><a href="/">home</a></li>
             <li><a href="/contact">contact</a></li>
             <li><a href="/about">about</a></li>
->>>>>>> 6d74ea323beafabe63b6dec79cb4a66e6110c0e1
 
             @if (Auth::check())
             <li><a href="/profile"><i class="fa fa-user-circle-o user" aria-hidden="true"></i> Profile</a></li>
@@ -99,7 +94,9 @@ nav bar
                         <span>{{$movies->language}}</span>
                     </div>
                     <div class="details">
-                        {{$movies->description}}
+                        <p>
+                        {!! $movies->description !!}
+                        </p>
                     </div>
                 </div>
                 <div class="title-bottom">

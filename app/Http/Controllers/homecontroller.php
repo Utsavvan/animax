@@ -12,6 +12,9 @@ class homecontroller extends Controller
     public function grid() {
 //        $movie = Movie::all();
         $movie = Movie::inRandomOrder()->get();
+        $amovie = Movie::inRandomOrder()->get();
+        $cmovie = Movie::inRandomOrder()->get();
+
 
         if(!empty(Auth::user()->email)) {
             $useremail = Auth::user()->email;
@@ -20,6 +23,6 @@ class homecontroller extends Controller
             $useremail = 1;
             $username = 1;
         }
-        return view('home',compact('movie','useremail','username'));
+        return view('home',compact('movie','amovie','cmovie','useremail','username'));
     }
 }

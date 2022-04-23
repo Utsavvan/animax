@@ -40,25 +40,6 @@
                 {{-- <span class="fa fa-search"></span>--}}
                 <button id="s-btn" type="submit">Search</button>
             </form>
-<<<<<<< HEAD
-        @else
-{{--            <li><a href="/login">Subscribe</a></li>--}}
-            <button onclick="window.location.href='/login';">
-                Subscribe
-            </button>
-        @endif
-
-    </div>
-    <ol>
-        <li><a href="/">home</a></li>
-        <li><a href="#">contact</a></li>
-        <li><a href="#">about</a></li>
-
-        @if (Auth::check())
-            <li><a href="/profile"><i class="fa fa-user-circle-o user" aria-hidden="true"></i></a></li>Profile
-        @else
-=======
-        
         </div>
         <ol>
             <li><a href="/">home</a></li>
@@ -68,7 +49,7 @@
             @if (Auth::check())
             <li><a href="/profile"><i class="fa fa-user-circle-o user" aria-hidden="true"></i> Profile</a></li>
             @else
->>>>>>> 6d74ea323beafabe63b6dec79cb4a66e6110c0e1
+
             <li><a href="/register">Register</a></li>
             <li><a href="/login">login</a></li>
             @endif
@@ -326,7 +307,7 @@
             </div>
             <div class="movies-slide carousel-nav-center owl-carousel">
                 <!-- MOVIE ITEM -->
-                @foreach($movie as $moviel)
+                @foreach($amovie as $moviel)
                 <div class="movie-card">
                     <div class="card-head">
                         <img src="{{ Voyager::image($moviel->poster)}}" alt="" class="card-img">
@@ -422,7 +403,7 @@
             </div>
             <div class="movies-slide carousel-nav-center owl-carousel">
                 <!-- MOVIE ITEM -->
-                @foreach($movie as $movie)
+                @foreach($cmovie as $movie)
                 <div class="movie-card">
                     <div class="card-head">
                         <img src="{{ Voyager::image($movie->poster)}}" alt="" class="card-img">
