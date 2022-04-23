@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -107,7 +108,7 @@
             <form action="search">
                 <input type="search" name="query" placeholder="Search here">
                 {{-- <span class="fa fa-search"></span>--}}
-                <button id="s-btn" type="submit">Search</button>
+                <button class="find" id="s-btn" type="submit">Search</button>
             </form>
         
         </div>
@@ -137,23 +138,41 @@
     <div class="layout">
         <div class="accordion">
             <div class="accordion__question">
-                <p>Where is Taj Mahal located?</p>
+                <p>What is Animax?</p>
 
             </div>
             <div class="accordion__answer">
-                <p>Taj Mahal is located in Agra, Uttar Pradesh.</p>
+                <p>Animax is a video streaming service that allows our customers to watch a wide variety of live movies. With ANimax, you can enjoy unlimited viewing of our content without commercials. You can watch your favorite Movies anytime, anywhere.</p>
 
             </div>
         </div>
         <div class="accordion">
             <div class="accordion__question">
-                <p>How many planets are there in solar system?</p>
+                <p>Am I eligible for a free trial?</p>
 
             </div>
             <div class="accordion__answer">
-                <p>
-                    There are eight planets in solar system. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.
-                </p>
+                <p>As of now, we don't have free trial on our subscription.</p>
+
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>How many devices can I watch on?</p>
+
+            </div>
+            <div class="accordion__answer">
+                <p>If you have a subscription planyou can watch on any device</p>
+
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>How do I purchase a Premium subscription?</p>
+
+            </div>
+            <div class="accordion__answer">
+                <p>The best way to purchase a Premium subscription is to go to the Subscription page.</p>
 
             </div>
         </div>

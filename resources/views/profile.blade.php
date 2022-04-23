@@ -31,6 +31,7 @@
 
 <!------------ Navbar ------------>
 
+<input type="checkbox" id="check">
 <nav>
     <a href="/" title="Website name">
         <div class="icon">Ani<b style="color: red;">M</b>ax</div>
@@ -38,18 +39,19 @@
     <div class="search_box">
         <form action="search">
             <input type="search" name="query" placeholder="Search here">
-            {{--        <span class="fa fa-search"></span>--}}
-            <button id="s-btn" type="submit">Search</button>
+            {{-- <span class="fa fa-search"></span>--}}
+            <button class="find" id="s-btn" type="submit">Search</button>
         </form>
     </div>
     <ol>
-        <li><a href="#">home</a></li>
-        <li><a href="#">contact</a></li>
-        <li><a href="#">about</a></li>
+        <li><a href="/">home</a></li>
+        <li><a href="/contact">contact</a></li>
+        <li><a href="/about">about</a></li>
 
         @if (Auth::check())
-            <li><a href="/profile"><i class="fa fa-user-circle-o user" aria-hidden="true"></i></a></li>Profile
+            <li><a href="/profile"><i class="fa fa-user-circle-o user" aria-hidden="true"></i> Profile</a></li>
         @else
+
             <li><a href="/register">Register</a></li>
             <li><a href="/login">login</a></li>
         @endif
@@ -81,15 +83,15 @@
                     @csrf
                     <div class="data col">
                         <h4>Email</h4>
-                        <input type="email" class="form-control col-md-7 col-xs-12"
+                        <input class="ip" type="email" class="form-control col-md-7 col-xs-12"
                                placeholder="" value="{{$email}}" name="email">
                     </div>
                     <div class="data col">
                         <h4>Username</h4>
-                        <input type="text" class="form-control col-md-7 col-xs-12"
+                        <input class="ip" type="text" class="form-control col-md-7 col-xs-12"
                                placeholder="" value="{{$username}}" name="username">
                     </div>
-                    <button type="submit" name="form1" class="btn btn-primary">Update</button>
+                    <button class="sub" type="submit" name="form1" class="btn btn-primary">Update</button>
                 </form>
             </div>
         </div>
@@ -124,22 +126,22 @@
                 @csrf
                 {{--        @method('PATCH')--}}
                 <div class="form-group">
-                    <input type="password" class="form-control col-md-7 col-xs-12"
+                    <input class="ip" type="password" class="form-control col-md-7 col-xs-12"
                            placeholder="Enter old password" name="oldpassword">
                 </div>
 
                 <div class="form-group">
-                    <input type="password" placeholder="Enter new password"
+                    <input class="ip" type="password" placeholder="Enter new password"
                            class="form-control col-md-7 col-xs-12" name="newpassword">
                 </div>
-                <button type="submit" name="form2" class="btn btn-primary">Update</button>
+                <button class="sub" type="submit" name="form2" class="btn btn-primary">Update</button>
 
             </form>
         </div>
 
 
         <br>
-        <button class="favorite styled" type="button">
+        <button class="sub" class="favorite styled" type="button">
             <a href="/logout">Log Out</a>
         </button>
 

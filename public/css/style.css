@@ -738,3 +738,124 @@ input[type="checkbox"] {
         width: 100%;
     }
 }
+
+.about{
+    color: white;
+}
+.abouth{
+    text-align: center;
+    color: red;
+}
+
+.our-team{
+    padding: 20px 15px 30px;
+    background: black;
+    border-radius: 15px;
+    text-align: center;
+    border:1px solid rgb(241, 15, 15);;
+
+}
+.our-team:hover{
+    transition: .5s;
+    box-shadow: 0px 1px 5px 0px #d1d1d1;
+}
+.our-team .pic{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    padding: 5px;
+    margin-bottom: 25px;
+    transition: all 0.5s ease 0s;
+    border-radius: 50%;
+}
+.our-team:hover .pic{
+    background: rgb(241, 15, 15);;
+    border-radius: 50%;
+}
+.pic img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.our-team .title{
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 0 7px 0;
+}
+.our-team .post{
+    display: block;
+    font-size: 15px;
+    color: rgb(241, 15, 15);
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.our-team .social{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.our-team .social li{
+    display: inline-block;
+    margin-right: 5px;
+}
+.our-team .social li a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    font-size: 15px;
+    color: rgb(241, 15, 15);
+    border: 1px solid rgb(241, 15, 15);
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .social li a{
+    background: rgb(241, 15, 15);
+    color: #fff;
+}
+@media only screen and (max-width: 990px){
+    .our-team{ margin-bottom: 30px; }
+}
+
+nav .find{
+    border-radius: 10%;
+    cursor: pointer;
+    border: #ff003c;
+    color: #bbbbbb;
+}
+
+.sub {
+    color: #d21e1e;
+    padding: 0.25rem 1.5rem;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sub:hover {
+    color: #ffffff;
+    background-color: #c0392b;
+    border: #c0392b;
+}
+
+.ip{
+    border: 2px solid #aaaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 3s;
+}
+.ip:focus{
+    border-color: dodgerblue;
+    box-shadow: 0 0 8px 0 dodgerblue;
+}

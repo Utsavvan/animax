@@ -33,7 +33,7 @@
             <form action="/search">
                 <input type="search" name="query" placeholder="Search here">
                 {{-- <span class="fa fa-search"></span>--}}
-                <button id="s-btn" type="submit">Search</button>
+                <button class="find" id="s-btn" type="submit">Search</button>
             </form>
         </div>
         <ol>

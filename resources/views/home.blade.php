@@ -38,7 +38,7 @@
             <form action="search">
                 <input type="search" name="query" placeholder="Search here">
                 {{-- <span class="fa fa-search"></span>--}}
-                <button id="s-btn" type="submit">Search</button>
+                <button class="find" id="s-btn" type="submit">Search</button>
             </form>
         </div>
         <ol>
@@ -201,7 +201,7 @@
     <div class="section">
         <div class="container">
             <div class="section-header">
-                latest series
+                Latest movies
             </div>
             <div class="movies-slide carousel-nav-center owl-carousel">
                 <!-- MOVIE ITEM -->
@@ -250,6 +250,7 @@
     <!-- END LATEST SERIES SECTION -->
 
     <!-- PRICING SECTION -->
+
     <div class="section">
         <div class="container">
             <div class="pricing">
@@ -265,14 +266,12 @@
                                         Premium
                                     </div>
                                     <div class="pricing-price">
-                                        $35.99 <span>/month</span>
+                                        ₹100 <span>/month</span>
                                     </div>
                                 </div>
                                 <div class="pricing-box-content">
-                                    <p>Originals</p>
-                                    <p>Swich plans anytime</p>
-                                    <p>65+ top Live</p>
-                                    <p><del>TV Channels</del></p>
+                                    <p>All devices</p>
+                                    <p>50+ top movies</p>
                                 </div>
                                 <div class="pricing-box-action">
                                     @if (Auth::check())
@@ -281,7 +280,7 @@
                                         <input type="text" name="name" hidden value={{$username}} class="form-control" placeholder="Name" required>
                                         <input type="text" name="mobile" hidden class="form-control" value={{rand(9111111111,9199999999)}} maxlength="10" placeholder="Mobile No.">
                                         <input type="email" class="form-control" hidden value={{$useremail}} placeholder="Email" name="email" required>
-                                        <button id="" type="submit">Subscribe</button>
+                                        <button id="" class="sub" type="submit">Subscribe</button>
                                     </form>
                                     @else
                                     {{-- <li><a href="/login">Subscribe</a></li>--}}
@@ -303,7 +302,7 @@
     <div class="section">
         <div class="container">
             <div class="section-header">
-                latest series
+                Popular movies
             </div>
             <div class="movies-slide carousel-nav-center owl-carousel">
                 <!-- MOVIE ITEM -->
@@ -399,7 +398,7 @@
     <div class="section">
         <div class="container">
             <div class="section-header">
-                latest series
+                latest Movies
             </div>
             <div class="movies-slide carousel-nav-center owl-carousel">
                 <!-- MOVIE ITEM -->

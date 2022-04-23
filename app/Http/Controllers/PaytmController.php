@@ -19,7 +19,7 @@ class PaytmController extends Controller
 
     public function pay(Request $request)
     {
-        $amount = 1500; //Amount to be paid
+        $amount = 100; //Amount to be paid
 
         $userData = [
             'name' => $request->name, // Name of user
